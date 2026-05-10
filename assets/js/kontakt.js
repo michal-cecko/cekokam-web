@@ -1,6 +1,6 @@
 const EMAILJS_PUBLIC_KEY = 'z19NOm3-mX_8wzdSd';
 const EMAILJS_SERVICE_ID = 'service_c2srcwl';
-const EMAILJS_TEMPLATE_ID = '6cgwmtp';
+const EMAILJS_TEMPLATE_ID = 'template_zhoo36b';
 
 if (window.emailjs) {
   emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
