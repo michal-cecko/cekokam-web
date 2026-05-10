@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Kontakt na firmu Cekokam s.r.o. — telefón, email, fakturačné údaje a kontaktný formulár.">
+  <meta name="keywords" content="cekokam, kontakt, formulár, telefón, email, fakturačné údaje">
+  <meta name="author" content="Michal Čečko">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <title>Kontakt — Cekokam</title>
+  <link href="assets/style/kontakt.css" rel="stylesheet">
+  <link href="assets/style/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+</head>
+<body>
+  <span class="scroll-addition" id="scrollToTop"></span>
+  <div class="wrapper">
+    <header>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <input type="checkbox" id="sluzby-toggle" class="sluzby-toggle">
+      <a class="logo" href="index.html">
+        <img src="assets/image/Logo tricko.png" alt="Cekokam s.r.o.">
+        <h1>Cekokam</h1>
+      </a>
+      <nav id="nav">
+        <ul id="nav-ul">
+          <li><a href="index.html">Domov</a></li>
+          <li class="sluzby-dropdown" id="sluzby-dropdown">
+            <label for="sluzby-toggle" id="sluzby-toggle-label" class="sluzby-toggle-label">Služby</label>
+          </li>
+          <div id="show-dropdown" class="shown-dropdown">
+            <li><i class="fas fa-circle"></i><a href="kamerove-systemy.html">Kamerové Systémy</a></li>
+            <li><i class="fas fa-circle"></i><a href="zabezpecovacie-systemy.html">Zabezpečovacie Systémy</a></li>
+            <li><i class="fas fa-circle"></i><a href="satelitna-technika.html">Satelitná Technika</a></li>
+            <li style="border-right: none;"><i class="fas fa-circle"></i><a href="dalsie-sluzby.html">Ďalšie Služby</a></li>
+          </div>
+          <li><a href="onas.html">O nás</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="facebook">
+        <a href="https://www.facebook.com/Cekokam/">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+      <label for="nav-toggle" id="nav-toggle-label" class="nav-toggle-label">
+        <span class="nav-toggle-span"></span>
+      </label>
+    </header>
+
+    <h1 class="kontakt-nadpis">Kontakt</h1>
+    <div class="kontakt-container">
+      <div class="kontaktne-udaje">
+        <div class="fakturacne-udaje">
+          <h1>Fakturačné údaje</h1>
+          <p><b>CEKOKAM s.r.o.</b></p>
+          <p>Hlavná 765</p>
+          <p>Ochodnica 023 35</p>
+          <p><b>IČO: </b>50709020</p>
+          <p><b>IČ DPH: </b>SK2120438672</p>
+          <p>Tatra Banka IBAN:</p>
+          <p>SK8811000000002940038171</p>
+        </div>
+        <br>
+        <div class="fyzicka-osoba">
+          <h1>Kontakt</h1>
+          <p><b>Ing. Peter Čečko</b></p>
+          <div class="telefon">
+            <i class="fas fa-phone-square-alt"></i>
+            <p>0911 269 686</p>
+          </div>
+          <div class="email">
+            <i class="fas fa-envelope"></i>
+            <p>cekokam@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="kontaktny-formular">
+        <h1>Napíšte nám!</h1>
+        <form id="formular" class="formular">
+          <div class="riadok-form">
+            <label for="meno"><i class="fas fa-user"></i>Meno a priezvisko</label>
+            <input class="form-input" type="text" name="meno" id="meno">
+            <span class="error"></span>
+          </div>
+          <div class="riadok-form">
+            <label for="cislo"><i class="fas fa-phone"></i>Telefónne číslo</label>
+            <input class="form-input" type="text" name="cislo" id="cislo">
+            <span class="error"></span>
+          </div>
+          <div class="riadok-form">
+            <label for="email"><i class="fas fa-envelope"></i>E-mail</label>
+            <input class="form-input" type="text" name="email" id="email">
+            <span class="error"></span>
+          </div>
+          <div class="rb-container-whole">
+            <label style="padding-left:0; margin-left:0;">Predmet spravy</label>
+            <div class="rb-container" id="rb-container">
+              <div>
+                <input type="radio" name="predmet" id="rb1" value="Reklamacie">
+                <label for="rb1"><span class="indicator"></span></label>
+              </div>
+              <span>Reklamácie</span>
+            </div>
+            <div class="rb-container">
+              <div>
+                <input type="radio" name="predmet" id="rb2" value="Zaujem o sluzbu">
+                <label for="rb2"><span class="indicator"></span></label>
+              </div>
+              <span>Záujem o službu</span>
+            </div>
+            <div class="rb-container" style="margin-bottom: 0;">
+              <div>
+                <input type="radio" name="predmet" id="rb3" value="Ine">
+                <label for="rb3"><span class="indicator"></span></label>
+              </div>
+              <span>Iné</span>
+            </div>
+            <span class="error"></span>
+          </div>
+          <div class="textarea-container">
+            <label for="sprava"><i class="fas fa-at"></i>Správa</label>
+            <textarea class="form-input" name="sprava" id="sprava"></textarea>
+            <span class="error"></span>
+          </div>
+
+          <button class="send" type="button">
+            <span>Odoslať</span>
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <a href="#scrollToTop" class="scrolltop" id="scrolltop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>Užitočné odkazy</h3>
+        <ul>
+          <li><a href="legislativa.html">Legislatíva</a></li>
+          <li><a href="oou.html">Ochrana osobných údajov</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div>Cekokam s.r.o. 2019 | &copy; Všetky práva vyhradené. | Made with ♥ by Michal Čečko</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- SweetAlert2 for nice success/error popups -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <!-- EmailJS SDK v4 -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="assets/js/general.js"></script>
+  <script src="assets/js/kontakt.js"></script>
+</body>
+</html>

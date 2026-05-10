@@ -1,0 +1,238 @@
+﻿@keyframes check {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes uncheck {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.svg#OpenSans")
+      format("svg");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+}
+.container-legislativa {
+  width: 100%;
+  margin: 13.542vw auto 0 auto;
+  background: #fafafa;
+  padding: 5% 5% 26.042vw 5%;
+  font-family: "Open Sans";
+}
+.container-legislativa h1 {
+  color: #f0c300;
+  font-size: 5.208vw;
+  margin-top: 0;
+}
+.container-legislativa p {
+  color: #7c7c7c;
+}
+.container-legislativa h2 {
+  color: #333;
+}
+.container-legislativa h3 {
+  color: #333;
+}
+.container-legislativa a {
+  color: #f0c300;
+}
+.container-legislativa ul {
+  list-style: none;
+  color: #7c7c7c;
+}
+.container-legislativa ol {
+  color: #7c7c7c;
+}
+.container-legislativa ul li::before {
+  content: "•";
+  font-size: 2.604vw;
+  color: #707070;
+  font-weight: bold;
+  display: inline-block;
+  width: 2.083vw;
+  margin-left: -2.083vw;
+}
+@media screen and (min-width: 950px) {
+  .container-legislativa {
+    width: 80vw;
+    margin: 6vw auto 0 auto;
+    background: #fafafa;
+    padding: 5% 5% 25.833vw 5%;
+    font-family: "Open Sans";
+  }
+  .container-legislativa h1 {
+    color: #f0c300;
+    font-size: 2.381vw;
+    margin-top: 0;
+  }
+  .container-legislativa h2 {
+    color: #f0c300;
+  }
+  .container-legislativa h3 {
+    color: #333;
+  }
+  .container-legislativa a {
+    color: #f0c300;
+  }
+  .container-legislativa ul {
+    list-style: none;
+  }
+  .container-legislativa ul li::before {
+    content: "•";
+    font-size: 1.19vw;
+    color: #707070;
+    font-weight: bold;
+    display: inline-block;
+    width: 0.952vw;
+    margin-left: -0.952vw;
+  }
+  body,
+  html {
+    background: #e0e0e0;
+  }
+}
+@media (max-width: 700px) {
+  .container-legislativa {
+    padding: 5% 5% 66.667vw 5%;
+    margin-top: 17.067vw;
+  }
+  .container-legislativa h1 {
+    color: #f0c300;
+    font-size: 8vw;
+    margin-top: 0;
+  }
+  .container-legislativa h2 {
+    color: #f0c300;
+  }
+  .container-legislativa h3 {
+    color: #333;
+  }
+  .container-legislativa a {
+    color: #f0c300;
+  }
+  .container-legislativa ul {
+    list-style: none;
+  }
+  .container-legislativa ul li::before {
+    content: "•";
+    font-size: 5.333vw;
+    color: #707070;
+    font-weight: bold;
+    display: inline-block;
+    width: 4.267vw;
+    margin-left: -4.267vw;
+  }
+} /*# sourceMappingURL=oou.min.css.map */

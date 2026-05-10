@@ -1,0 +1,760 @@
+@keyframes check {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes uncheck {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.svg#OpenSans")
+      format("svg");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: #e0e0e0;
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+}
+.about-nadpis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13.542vw;
+  font-family: "Russo One";
+  color: #333;
+  background: #f0c300;
+  margin-bottom: 5%;
+  height: 6.51vw;
+  font-size: 2.3vw;
+}
+.about-container {
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-family: "Open Sans";
+  margin-bottom: 26.042vw;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  padding: 3.906vw;
+  grid-gap: 2.604vw;
+}
+.about-container h1 {
+  font-family: "Open Sans";
+  color: #333;
+}
+.slideshow {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+}
+.slideshow div {
+  position: absolute;
+  image-orientation: from-image;
+  width: 30vw;
+  height: auto;
+  left: 50%;
+  top: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
+}
+.slide {
+  display: none;
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.about-intro {
+  padding: 10%;
+  position: relative;
+  width: 100%;
+  height: 52.083vw;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+.about-intro h1 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 3.646vw;
+}
+.about-container p {
+  color: #333;
+  font-size: 2.2vw;
+}
+.ciara {
+  display: block;
+  height: 2px;
+  background: #333;
+  width: 6.51vw;
+  border-radius: 1.953vw;
+  margin-top: 0.651vw;
+}
+.about-certifikat-container {
+  display: block;
+  background: #fff;
+  width: 100%;
+  padding: 5%;
+  justify-items: center;
+  grid-column: 1 / span 2;
+}
+.nadpis {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+.symbol {
+  display: block;
+  position: relative;
+  width: 7.813vw;
+  height: 7.813vw;
+  border-radius: 50%;
+  background: #f0c300;
+}
+.nadpis h1 {
+  font-size: 3.646vw;
+}
+.symbol i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.255vw;
+  color: #333;
+}
+.popis {
+  text-align: center;
+  margin-top: 3.906vw;
+  color: #333;
+}
+.about-certifikat-img {
+  background: #fff;
+  width: 100%;
+  padding: 3.906vw 0;
+  grid-column: 1 / span 2;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-items: center;
+}
+.about-certifikat-img img {
+  height: auto;
+  width: 80%;
+}
+.about-namieru-container {
+  grid-column: 1 / span 2;
+  background-image: url("../image/pozadieOnas1.jpg");
+  background-size: cover;
+  width: 100%;
+  padding: 5%;
+  display: flex;
+  text-align: center;
+}
+.about-namieru-container .nadpis h1 {
+  color: #333;
+}
+.about-namieru-container .symbol,
+.namieru-button {
+  -webkit-box-shadow: 0px 0px 3.906vw 0px #333;
+  -moz-box-shadow: 0px 0px 3.906vw 0px #333;
+  box-shadow: 0px 0px 3.906vw 0px #333;
+}
+.about-namieru-container .popis {
+  color: #333;
+  font-size: 2.604vw;
+  margin-top: 0;
+}
+.podmaz {
+  background: rgba(202, 202, 202, 0.6);
+  width: 100%;
+  height: 100%;
+  padding: 2.604vw 0;
+}
+.namieru-button {
+  padding: 1.302vw 3.906vw;
+  border-radius: 6.51vw;
+  border: 3px solid #f0c300;
+  color: #333;
+  background: #f0c300;
+  font-family: "Open Sans";
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-top: 3.906vw;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.about-ponuka-container {
+  grid-column: 1 / span 2;
+  display: block;
+  background: #fff;
+  height: unset;
+  width: 100%;
+  padding: 5%;
+  justify-items: center;
+}
+.about-ponuka-container .ciara {
+  display: none;
+}
+.zoznam-container {
+  display: flex;
+}
+.zoznam-container .left {
+  width: 50%;
+  list-style: none;
+  color: #333;
+  margin-top: 9.115vw;
+  text-align: right;
+  padding: 0;
+}
+.zoznam-container .right {
+  width: 50%;
+  list-style: none;
+  margin-top: 9.115vw;
+  color: #333;
+  text-align: left;
+  padding: 0;
+  position: relative;
+}
+.zoznam-container .left li {
+  margin-right: 1.953vw;
+}
+.zoznam-container ul li {
+  margin-bottom: 3.906vw;
+  font-size: 2.344vw;
+}
+.zoznam-container .right li {
+  margin-left: 1.953vw;
+}
+.zoznam-container .listMiddleColumn {
+  width: 1.302vw;
+  display: block;
+  border-radius: 3.906vw;
+  background: #333;
+  height: 26.042vw;
+  margin-top: 4.557vw;
+}
+.galeria-container .nadpis span i {
+  font-size: 4.557vw;
+}
+.galeria-container {
+  grid-column: 1 / span 2;
+  display: block;
+  width: 100%;
+  padding: 5%;
+  text-align: center;
+  font-size: 2.083vw;
+  background: #fff;
+}
+.galeria-container .popis p {
+  padding: 0 5%;
+}
+.viac-btn {
+  z-index: 500;
+  background: #fff;
+}
+.viac-btn::before {
+  z-index: 400;
+}
+@media screen and (min-width: 950px) {
+  body,
+  html {
+    background: #e0e0e0;
+  }
+  .about-nadpis {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin: 6vw auto 0 auto;
+    font-family: "Russo One";
+    color: #333;
+    background: #f0c300;
+    height: 2.976vw;
+    width: 80vw;
+    font-size: 1vw;
+  }
+  .about-container {
+    width: 80vw;
+    background: #fff;
+    margin: auto;
+    font-family: "Open Sans";
+    margin-bottom: 11.905vw;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    padding: 0;
+    grid-gap: 0px;
+  }
+  .ciara {
+    width: 8.929vw;
+  }
+  .about-container h1 {
+    font-family: "Open Sans";
+    color: #333;
+  }
+  .slideshow {
+    position: relative;
+    height: 80vh;
+    width: 100%;
+    border-bottom: 1px solid #dad5d5;
+  }
+  .slideshow div {
+    position: absolute;
+    image-orientation: from-image;
+    width: 60%;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
+  .slideshow div img {
+    border-radius: 10%;
+    -webkit-box-shadow: 0px 0px 1.786vw 0px #333;
+    -moz-box-shadow: 0px 0px 1.786vw 0px #333;
+    box-shadow: 0px 0px 1.786vw 0px #333;
+  }
+  .about-container p {
+    font-size: 1.2vw;
+  }
+  .about-intro {
+    padding: 10%;
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    border-bottom: 1px solid #dad5d5;
+  }
+  .about-intro h1 {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 2.381vw;
+    margin-bottom: 2.381vw;
+  }
+  .about-intro p {
+    margin-top: 2.381vw;
+    font-size: 1.19vw;
+  }
+  .about-certifikat-container {
+    display: block;
+    width: 100%;
+    padding: 10% 5%;
+    justify-items: center;
+    grid-column: 1 / span 2;
+    border-bottom: 1px solid #dad5d5;
+  }
+  .nadpis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+  }
+  .symbol {
+    display: block;
+    position: relative;
+    width: 3.571vw;
+    height: 3.571vw;
+    border-radius: 50%;
+    background: #f0c300;
+  }
+  .nadpis h1 {
+    font-size: 2.083vw;
+  }
+  .symbol i {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.488vw;
+    color: #333;
+  }
+  .popis {
+    text-align: center;
+    margin-top: 1.786vw;
+    color: #333;
+    font-size: 1.19vw;
+  }
+  .about-certifikat-img {
+    width: 100%;
+    padding: 10% 0;
+    grid-column: 1 / span 2;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center;
+    border-bottom: 1px solid #dad5d5;
+  }
+  .about-certifikat-img img {
+    height: auto;
+    width: 80%;
+  }
+  .about-namieru-container {
+    grid-column: 1 / span 2;
+    background-image: url("../image/pozadieOnas1.jpg");
+    background-size: cover;
+    width: 100%;
+    padding: 5%;
+    display: flex;
+    text-align: center;
+  }
+  .about-namieru-container .nadpis h1 {
+    color: #333;
+  }
+  .about-namieru-container .symbol,
+  .namieru-button {
+    -webkit-box-shadow: 0px 0px 1.786vw 0px #333;
+    -moz-box-shadow: 0px 0px 1.786vw 0px #333;
+    box-shadow: 0px 0px 1.786vw 0px #333;
+  }
+  .about-namieru-container .popis {
+    color: #333;
+    font-size: 1.19vw;
+    margin-top: 0;
+  }
+  .podmaz {
+    background: rgba(202, 202, 202, 0.6);
+    width: 100%;
+    height: 100%;
+    padding: 1.19vw 0;
+  }
+  .namieru-button {
+    padding: 0.595vw 1.786vw;
+    border-radius: 2.976vw;
+    border: 0.179vw solid #f0c300;
+    color: #333;
+    background: #f0c300;
+    font-family: "Open Sans";
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1.786vw;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.8vw;
+  }
+  .about-ponuka-container {
+    grid-column: 1 / span 2;
+    display: block;
+    background: #fff;
+    height: unset;
+    width: 100%;
+    padding: 10% 5%;
+    justify-items: center;
+    border-bottom: 1px solid #dad5d5;
+  }
+  .zoznam-container ul li {
+    font-size: 1.429vw;
+  }
+  .zoznam-container .listMiddleColumn {
+    height: 21.095vw;
+    width: 0.8vw;
+  }
+  .about-ponuka-container .ciara {
+    display: none;
+  }
+  .galeria-container .nadpis span i {
+    font-size: 2.083vw;
+  }
+  .galeria-container {
+    grid-column: 1 / span 2;
+    display: block;
+    width: 100%;
+    padding: 10% 5%;
+    text-align: center;
+    font-size: 0.952vw;
+  }
+  .galeria-container .popis p {
+    padding: 0 5%;
+  }
+}
+@media (max-width: 700px) {
+  .about-nadpis {
+    margin-top: 17.067vw;
+    font-size: 4vw;
+    height: 10vw;
+  }
+  .about-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 66.667vw 0;
+    padding: 5%;
+  }
+  .slideshow {
+    position: relative;
+    height: 60vh;
+    width: 100%;
+    background: #fff;
+  }
+  .slideshow div {
+    position: absolute;
+    image-orientation: from-image;
+    width: 70vw;
+    height: auto;
+    left: 50%;
+    top: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
+  .about-intro {
+    order: -1;
+    height: 90vw;
+  }
+  .about-container p {
+    font-size: 4vw;
+  }
+  .about-intro h1 {
+    font-size: 7vw;
+  }
+  .ciara {
+    display: block;
+    height: 2px;
+    background: #333;
+    width: 12vw;
+    border-radius: 1.953vw;
+    margin-top: 0.651vw;
+  }
+  .about-certifikat-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 15% 10%;
+  }
+  .symbol {
+    width: 12vw;
+    height: 12vw;
+    border-radius: 50%;
+    background: #f0c300;
+  }
+  .symbol i {
+    font-size: 6vw;
+    margin: 0;
+  }
+  .about-certifikat-container .nadpis h1 {
+    font-size: 5.333vw;
+  }
+  .about-certifikat-img {
+    grid-gap: 10.667vw;
+    grid-template-columns: 100%;
+    padding: 15% 5%;
+  }
+  .about-namieru-container {
+    background-repeat: no-repeat;
+    background-position-x: -74.667vw;
+    padding: 5%;
+  }
+  .about-namieru-container .nadpis h1 {
+    font-size: 5.333vw;
+  }
+  .about-namieru-container .popis {
+    font-size: 4.8vw;
+  }
+  .podmaz {
+    padding: 8vw;
+  }
+  .about-ponuka-container {
+    width: 100%;
+    padding: 10% 5% 5% 5%;
+    height: unset;
+  }
+  .about-ponuka-container .ciara {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .about-ponuka-container .nadpis h1 {
+    text-align: center;
+    font-size: 5.333vw;
+  }
+  .about-ponuka-container .nadpis i {
+    font-size: 6.667vw;
+  }
+  .zoznam-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .zoznam-container .left {
+    width: 100%;
+    list-style: disc;
+    color: #333;
+    margin: 5.333vw 0 0 0;
+    text-align: left;
+    padding: 5% 5% 0 5%;
+  }
+  .zoznam-container .right {
+    width: 100%;
+    list-style: disc;
+    margin: 0;
+    padding: 0 5% 5% 5%;
+    color: #333;
+    text-align: left;
+    position: relative;
+  }
+  .zoznam-container .left li {
+    margin-right: 0;
+    margin-left: 4vw;
+  }
+  .zoznam-container ul li {
+    margin-bottom: 8vw;
+    font-size: 4.267vw;
+  }
+  .zoznam-container .right li {
+    margin-left: 4vw;
+  }
+  .zoznam-container .listMiddleColumn {
+    display: none;
+  }
+  .galeria-container .nadpis span i {
+    font-size: 7vw;
+  }
+  .galeria-container .nadpis h1 {
+    font-size: 5.333vw;
+  }
+  .galeria-container {
+    display: block;
+    background: #fff;
+    width: 100%;
+    padding: 10%;
+    text-align: center;
+    font-size: 4.267vw;
+  }
+  .galeria-container .popis p {
+    padding: 0 5%;
+  }
+} /*# sourceMappingURL=onas.min.css.map */

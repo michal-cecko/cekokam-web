@@ -1,0 +1,663 @@
+@keyframes check {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes uncheck {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.svg#OpenSans")
+      format("svg");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background-image: linear-gradient(to top, #f3f3f3 0%, #eeeeee 100%);
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+}
+.kontakt-container {
+  width: 85%;
+  margin: 13.542vw auto 32.552vw auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  font-family: "Open Sans";
+  color: #555;
+  text-align: center;
+}
+.kontakt-nadpis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 13.542vw;
+  font-family: "Russo One";
+  color: #333;
+  background: #f0c300;
+  margin-bottom: 5%;
+  height: 6.51vw;
+}
+.kontaktne-udaje {
+  background: #fff;
+  font-size: 2.604vw;
+  padding: 10%;
+}
+.fyzicka-osoba .telefon,
+.fyzicka-osoba .email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fyzicka-osoba .telefon i,
+.fyzicka-osoba .email i {
+  margin-right: 1.302vw;
+  font-size: 3.385vw;
+}
+.fakturacne-udaje h1 {
+  font-size: 4.557vw;
+}
+.kontaktny-formular {
+  background: #fff;
+  padding: 10%;
+}
+.kontakt-container h1 {
+  margin-bottom: 10.417vw;
+}
+.kontaktny-formular p {
+  font-size: 2.344vw;
+  text-align: center;
+}
+.formular {
+  display: flex;
+  flex-direction: column;
+  font-family: "Open Sans";
+  margin-bottom: 10.417vw;
+}
+.formular div {
+  position: relative;
+  margin-bottom: 2.604vw;
+}
+.formular input,
+textarea {
+  background: #f3f3f3;
+  outline: none;
+  width: 100%;
+  padding: 1.302vw;
+  overflow: hidden;
+  color: #555;
+  transition: all 0.5s ease-in-out;
+  resize: none;
+  font-family: "Open Sans";
+  border: 0.13vw solid #e0e0e0;
+}
+.formular textarea {
+  height: 26.042vw;
+}
+.formular div label {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  font-size: 2.344vw;
+  margin-bottom: 0.651vw;
+  color: #555;
+  padding-left: 3.906vw;
+  text-transform: uppercase;
+}
+.formular div i {
+  position: absolute;
+  top: 50%;
+  left: 0.651vw;
+  z-index: 800;
+  transform: translateY(-50%);
+  color: #555;
+}
+.rb-container {
+  width: 100%;
+  height: 10.417vw;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  background: #f3f3f3;
+  align-items: center;
+  border: 0.13vw solid #e0e0e0;
+  padding: 1.953vw 0;
+}
+.rb-container input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.rb-container div label {
+  position: relative;
+  width: 3.906vw;
+  height: 3.906vw;
+  border-radius: 50%;
+  border: 0.13vw solid #e0e0e0;
+  background: #fff;
+  margin: 0;
+  cursor: pointer;
+  transform: translateX(-1.302vw);
+}
+.rb-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  border-right: 0.13vw solid #e0e0e0;
+}
+.rb-container div label span {
+  display: none;
+  position: absolute;
+  width: 1.953vw;
+  height: 1.953vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #f0c300;
+  border-radius: 50%;
+}
+.rb-container span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 2.344vw;
+  color: #555;
+}
+.rb-container.active label .indicator {
+  display: block;
+}
+.rb-container.active {
+  background: #f0c300;
+}
+.rb-container.active span {
+  color: #fff;
+}
+.formular input:focus,
+textarea:focus {
+  background-color: #ddd;
+}
+.send {
+  display: block;
+  position: relative;
+  background: #555;
+  width: 100%;
+  height: 7.813vw;
+  line-height: 7.813vw;
+  color: #f3f3f3;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 0.651vw;
+  border: none;
+  transition: all 300ms ease;
+  padding: 0;
+}
+.send span {
+  text-transform: uppercase;
+  font-size: 2.344vw;
+  width: 100%;
+  height: 100%;
+}
+.send .fa-paper-plane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  height: 7.813vw;
+  line-height: 7.813vw;
+  opacity: 0;
+  z-index: 900;
+  font-size: 3.906vw;
+  color: #555;
+  background-color: #f0c300;
+  transition: all 300ms ease;
+}
+.send:hover {
+  transform: translateY(-0.651vw);
+}
+.send:hover .fa-paper-plane {
+  opacity: 1;
+}
+.swal-custom {
+  font-family: "Roboto";
+}
+.swal-title {
+  color: #505050;
+  font-size: 3.5vw;
+  text-align: center;
+}
+.swal-text {
+  color: #969696;
+  font-size: 2vw;
+  text-align: center;
+}
+.error {
+  margin-top: 0.651vw;
+  display: block;
+  font-size: 2vw;
+  width: 100%;
+  text-align: left;
+  color: #e74c3c;
+}
+@media screen and (min-width: 950px) {
+  .kontakt-container {
+    width: 80vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-family: "Open Sans";
+    color: #333;
+    text-align: center;
+    padding-bottom: 11vw;
+  }
+  .kontakt-container h1 {
+    font-size: 2.083vw;
+  }
+  .kontakt-nadpis {
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: center;
+    margin: 6vw auto 0 auto;
+    font-family: "Russo One";
+    color: #333;
+    background: #f0c300;
+    height: 2.976vw;
+    font-size: 2vw;
+  }
+  .kontaktne-udaje {
+    transform: translateX(0);
+    background: #fff;
+    font-size: 1.19vw;
+    padding: 10%;
+  }
+  .fyzicka-osoba .telefon,
+  .fyzicka-osoba .email {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .fyzicka-osoba .telefon i,
+  .fyzicka-osoba .email i {
+    margin-right: 0.595vw;
+    font-size: 1.548vw;
+  }
+  .fakturacne-udaje h1 {
+    font-size: 2.083vw;
+  }
+  .kontakt-container h1 {
+    margin-bottom: 3vw;
+  }
+  .kontaktny-formular {
+    background: #fff;
+    padding: 10%;
+    transform: translateX(0);
+  }
+  body,
+  html {
+    background: #e0e0e0;
+  }
+  .kontaktny-formular p {
+    font-size: 1.071vw;
+    text-align: center;
+  }
+  .formular {
+    margin-bottom: 4.762vw;
+  }
+  .formular .riadok-form {
+    width: 80%;
+    margin-bottom: 1.19vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .formular div label {
+    font-size: 1.071vw;
+    margin-bottom: 0.298vw;
+    padding-left: 2.381vw;
+  }
+  .formular input,
+  textarea {
+    padding: 0.595vw;
+    border: 0.06vw solid #e0e0e0;
+  }
+  .formular input {
+    padding-left: 1.786vw;
+    font-size: 1.2vw;
+  }
+  .formular textarea {
+    height: 11.905vw;
+    font-size: 1.2vw;
+  }
+  .textarea-container {
+    margin-top: -1.19vw;
+  }
+  .formular .rb-container div label {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-size: 1.071vw;
+    margin-bottom: 0.298vw;
+    color: #555;
+    padding-left: 1.786vw;
+    text-transform: uppercase;
+  }
+  .textarea-container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .formular div i {
+    left: 0.595vw;
+  }
+  .rb-container-whole {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rb-container {
+    height: 4.762vw;
+    border: 0.06vw solid #e0e0e0;
+    padding: 0.893vw 0;
+  }
+  .rb-container div label {
+    width: 2.5vw;
+    height: 2.5vw;
+    border: 0.06vw solid #e0e0e0;
+    transform: translate(-0.893vw, 0.179vw);
+  }
+  .rb-container div label span {
+    width: 1.5vw;
+    height: 1.5vw;
+  }
+  .rb-container div {
+    border-right: 0.06vw solid #e0e0e0;
+    margin: 0;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .rb-container span {
+    font-size: 1.3vw;
+  }
+  .send {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+    height: 3.571vw;
+    line-height: 3.571vw;
+    border-radius: 0.298vw;
+  }
+  .send span {
+    font-size: 1.071vw;
+  }
+  .send .fa-paper-plane {
+    height: 3.571vw;
+    line-height: 3.571vw;
+    font-size: 1.786vw;
+  }
+  .send:hover {
+    transform: translateY(-0.298vw);
+  }
+  .swal-custom {
+    font-family: "Roboto";
+  }
+  .swal-title {
+    font-size: 1.8vw;
+  }
+  .swal-text {
+    font-size: 1.2vw;
+  }
+  .error {
+    margin-top: 0.3vw;
+    display: block;
+    font-size: 1vw;
+    width: 100%;
+    text-align: left;
+    color: #e74c3c;
+  }
+}
+@media (max-width: 700px) {
+  .kontakt-container {
+    margin: 25.6vw auto 0 auto;
+    grid-template-columns: 100%;
+    grid-gap: 13.333vw;
+    padding-bottom: 66.667vw;
+  }
+  .kontakt-nadpis {
+    margin-top: 17.067vw;
+    font-size: 8vw;
+    height: 10vw;
+    color: #333;
+  }
+  .kontaktne-udaje {
+    transform: translateX(0px);
+    font-size: 5vw;
+  }
+  .fyzicka-osoba .telefon i,
+  .fyzicka-osoba .email i {
+    margin-right: 1.302vw;
+    font-size: 6vw;
+  }
+  .kontaktny-formular {
+    background: #fff;
+    padding: 10%;
+    transform: translateX(0px);
+  }
+  .kontakt-container h1 {
+    margin-bottom: 21.333vw;
+    line-height: 10.667vw;
+    font-size: 8vw;
+  }
+  .kontaktny-formular p {
+    font-size: 4.8vw;
+    text-align: center;
+  }
+  .formular {
+    margin-bottom: 21.333vw;
+  }
+  .formular div {
+    margin-bottom: 5.333vw;
+  }
+  .formular div label {
+    font-size: 4.8vw;
+    margin-bottom: 1.333vw;
+    padding-left: 10.667vw;
+  }
+  .formular input,
+  textarea {
+    padding: 2.667vw;
+    border: 0.267vw solid #e0e0e0;
+    font-size: 4vw;
+  }
+  .formular input {
+    padding-left: 8vw;
+  }
+  .formular textarea {
+    height: 53.333vw;
+  }
+  .formular .rb-container div label {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    font-size: 4.8vw;
+    margin-bottom: 1.333vw;
+    color: #555;
+    padding-left: 8vw;
+    text-transform: uppercase;
+  }
+  .textarea-container {
+    margin-top: -5.333vw;
+    padding-top: 4vw;
+  }
+  .formular div i {
+    left: 2.667vw;
+  }
+  .rb-container {
+    height: 21.333vw;
+    border: 0.267vw solid #e0e0e0;
+    padding: 4vw 0;
+  }
+  .rb-container div label {
+    width: 8vw;
+    height: 8vw;
+    border: 0.267vw solid #e0e0e0;
+    transform: translateX(-2.667vw);
+  }
+  .rb-container div label span {
+    width: 4vw;
+    height: 4vw;
+  }
+  .rb-container div {
+    border-right: 0.267vw solid #e0e0e0;
+    margin: 0;
+  }
+  .rb-container span {
+    font-size: 4.5vw;
+  }
+  .send {
+    height: 16vw;
+    line-height: 16vw;
+    border-radius: 1.333vw;
+  }
+  .send span {
+    font-size: 4.8vw;
+  }
+  .send .fa-paper-plane {
+    height: 16vw;
+    line-height: 16vw;
+    font-size: 8vw;
+  }
+  .send:hover {
+    transform: translateY(-1.333vw);
+  }
+  .swal-custom {
+    font-family: "Roboto";
+  }
+  .swal2-confirm {
+    background-color: #505050 !important;
+  }
+  .swal2-confirm:focus {
+    box-shadow: 0 0 0 3px rgba(80, 80, 80, 0.5) !important;
+  }
+  .swal-title {
+    font-size: 7vw;
+  }
+  .swal-text {
+    font-size: 4vw;
+  }
+  .error {
+    margin-top: 0.651vw;
+    display: block;
+    font-size: 4vw;
+    width: 100%;
+    text-align: left;
+    color: #e74c3c;
+  }
+} /*# sourceMappingURL=kontakt.min.css.map */

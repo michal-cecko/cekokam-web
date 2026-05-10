@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Galéria našich prác a zákaziek — kamerové systémy, alarmy, satelitná technika, videovrátniky a ďalšie.">
+  <meta name="keywords" content="cekokam, galéria, fotky, práce, zákazky">
+  <meta name="author" content="Michal Čečko">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+  <title>Galéria — Cekokam</title>
+  <link href="assets/style/onas-galeria.css" rel="stylesheet">
+  <link href="assets/style/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+  <style>
+    /* Simple lightbox */
+    .lightbox-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.92);
+      display: none; align-items: center; justify-content: center;
+      z-index: 9999;
+    }
+    .lightbox-overlay.open { display: flex; }
+    .lightbox-overlay img {
+      max-width: 92vw; max-height: 92vh;
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+      user-select: none;
+    }
+    .lightbox-overlay .lb-btn {
+      position: absolute; background: none; border: none; color: #fff;
+      font-size: 2rem; cursor: pointer; padding: 1rem;
+      transition: transform 0.15s ease;
+    }
+    .lightbox-overlay .lb-btn:hover { transform: scale(1.15); }
+    .lightbox-overlay .lb-close { top: 1rem; right: 1rem; }
+    .lightbox-overlay .lb-prev { left: 1rem; top: 50%; transform: translateY(-50%); }
+    .lightbox-overlay .lb-next { right: 1rem; top: 50%; transform: translateY(-50%); }
+    .lightbox-overlay .lb-prev:hover { transform: translateY(-50%) scale(1.15); }
+    .lightbox-overlay .lb-next:hover { transform: translateY(-50%) scale(1.15); }
+    .lightbox-overlay .lb-counter {
+      position: absolute; bottom: 1rem; left: 50%; transform: translateX(-50%);
+      color: #fff; font-size: 0.9rem; opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <span class="scroll-addition" id="scrollToTop"></span>
+  <div class="wrapper">
+    <header>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <input type="checkbox" id="sluzby-toggle" class="sluzby-toggle">
+      <a class="logo" href="index.html">
+        <img src="assets/image/Logo tricko.png" alt="Cekokam s.r.o.">
+        <h1>Cekokam</h1>
+      </a>
+      <nav id="nav">
+        <ul id="nav-ul">
+          <li><a href="index.html">Domov</a></li>
+          <li class="sluzby-dropdown" id="sluzby-dropdown">
+            <label for="sluzby-toggle" id="sluzby-toggle-label" class="sluzby-toggle-label">Služby</label>
+          </li>
+          <div id="show-dropdown" class="shown-dropdown">
+            <li><i class="fas fa-circle"></i><a href="kamerove-systemy.html">Kamerové Systémy</a></li>
+            <li><i class="fas fa-circle"></i><a href="zabezpecovacie-systemy.html">Zabezpečovacie Systémy</a></li>
+            <li><i class="fas fa-circle"></i><a href="satelitna-technika.html">Satelitná Technika</a></li>
+            <li style="border-right: none;"><i class="fas fa-circle"></i><a href="dalsie-sluzby.html">Ďalšie Služby</a></li>
+          </div>
+          <li><a href="onas.html">O nás</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+      <div class="facebook">
+        <a href="https://www.facebook.com/Cekokam/">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </div>
+      <label for="nav-toggle" id="nav-toggle-label" class="nav-toggle-label">
+        <span class="nav-toggle-span"></span>
+      </label>
+    </header>
+
+    <div class="galeria-nadpis">
+      <h1>Galéria</h1>
+    </div>
+    <div class="galeria-container">
+      <div class="grid show" id="galeria-grid">
+        <!-- images injected by galeria.js -->
+      </div>
+    </div>
+
+    <div class="lightbox-overlay" id="lightbox" aria-hidden="true">
+      <button class="lb-btn lb-close" aria-label="Zavrieť">&times;</button>
+      <button class="lb-btn lb-prev" aria-label="Predchádzajúce">&#10094;</button>
+      <img id="lightbox-img" src="" alt="">
+      <button class="lb-btn lb-next" aria-label="Ďalšie">&#10095;</button>
+      <div class="lb-counter" id="lightbox-counter"></div>
+    </div>
+
+    <a href="#scrollToTop" class="scrolltop" id="scrolltop">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <h3>Užitočné odkazy</h3>
+        <ul>
+          <li><a href="legislativa.html">Legislatíva</a></li>
+          <li><a href="oou.html">Ochrana osobných údajov</a></li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div>Cekokam s.r.o. 2019 | &copy; Všetky práva vyhradené. | Made with ♥ by Michal Čečko</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/general.js"></script>
+  <script src="assets/js/galeria.js"></script>
+</body>
+</html>

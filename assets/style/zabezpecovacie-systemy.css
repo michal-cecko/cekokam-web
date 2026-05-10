@@ -1,0 +1,456 @@
+@keyframes check {
+  0% {
+    transform: scale(0);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes uncheck {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-300.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-regular.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-600.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-700.svg#OpenSans")
+      format("svg");
+}
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.eot");
+  src:
+    local(""),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.eot?#iefix")
+      format("embedded-opentype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.woff2")
+      format("woff2"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.woff")
+      format("woff"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.ttf")
+      format("truetype"),
+    url("../fonts/secondary/open-sans-v23-latin-ext_latin-800.svg#OpenSans")
+      format("svg");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body,
+html {
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+}
+.zs {
+  margin-top: 13.542vw;
+  font-family: "Russo One";
+  color: #333;
+}
+.zs-nadpis {
+  width: 100%;
+  height: 6.51vw;
+  background: #f0c300;
+  text-align: center;
+  font-size: 3.906vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zs-hero {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.zs-hero img {
+  width: 100%;
+  height: auto;
+}
+.zs-hero-popis {
+  position: absolute;
+  box-sizing: border-box;
+  width: 45.573vw;
+  height: 52.083vw;
+  left: 5%;
+  background-color: rgba(240, 195, 0, 0.9);
+  font-size: 2.604vw;
+  padding: 0 5.208vw;
+  text-align: center;
+  font-family: "Open Sans";
+}
+.zabezpecene {
+  padding: 0;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-3.906vw);
+}
+.zabezpecene .circle {
+  position: absolute;
+  right: 10%;
+  width: 3.906vw;
+  height: 3.906vw;
+  border-radius: 50%;
+  background: red;
+}
+.odomknute {
+  padding: 0;
+  display: flex;
+  height: 15%;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-3.906vw);
+}
+.odomknute .circle {
+  position: absolute;
+  right: 10%;
+  width: 3.906vw;
+  height: 3.906vw;
+  border-radius: 50%;
+  background: green;
+}
+.zs-sekcia {
+  margin: 6.51vw auto 10.417vw auto;
+}
+.zs-sekcia {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 1.302vw;
+  align-items: center;
+  justify-items: center;
+}
+.zs-sekcia-image img {
+  width: 100%;
+  height: auto;
+}
+.zs-sekcia-popis {
+  transform: translateY(-3.906vw);
+}
+.zs-sekcia-popis p {
+  font-family: "Open Sans";
+  font-size: 17px;
+}
+.zs-sekcia-popis h1 {
+  font-size: 3.906vw;
+}
+.zs-sekcia div {
+  padding: 0 10%;
+}
+.zs-aplikacia {
+  width: 100%;
+  height: 110.677vw;
+  background: #e0e0e0;
+}
+.zs-aplikacia-nadpis {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f6a901;
+}
+.zs-aplikacia-nadpis h1 {
+  font-size: 3.646vw;
+}
+.zs-aplikacia-nadpis i {
+  font-size: 3.646vw;
+  padding-right: 1.042vw;
+}
+.zs-aplikacia-popis {
+  height: 23.438vw;
+  padding: 0 5%;
+}
+.zs-aplikacia-popis p {
+  text-align: center;
+  font-family: "Open Sans";
+  font-size: 2.344vw;
+}
+.zs-aplikacia-image img {
+  margin-top: 6.51vw;
+  width: 80%;
+  height: auto;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+@media screen and (min-width: 950px) {
+  body,
+  html {
+    background: #e0e0e0;
+  }
+  .zs-nadpis {
+    height: 3.5vw;
+    font-size: 2vw;
+  }
+  .zs {
+    width: 80vw;
+    padding-bottom: 11.905vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6vw;
+    background-image: linear-gradient(180deg, #ffffff 0%, #ebedee 100%);
+  }
+  .zs p {
+    font-size: 1.3vw;
+  }
+  .zs-hero-popis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 25vw;
+    height: 30vw;
+    left: 12%;
+    font-size: 2vw;
+    padding: 0 2.3vw;
+  }
+  .zs-hero-popis h1 {
+    font-size: 2vw;
+  }
+  .zabezpecene {
+    transform: translateX(-2vw);
+  }
+  .zabezpecene .circle {
+    width: 2.3vw;
+    height: 2.3vw;
+  }
+  .odomknute {
+    transform: translateX(-2vw);
+  }
+  .odomknute .circle {
+    width: 2.3vw;
+    height: 2.3vw;
+  }
+  .zs-sekcia {
+    padding: 2vw;
+    margin: 8vw auto;
+  }
+  .zs-sekcia-popis {
+    transform: translateY(-3vw);
+  }
+  .zs-sekcia-popis p {
+    font-size: 1.3vw;
+  }
+  .zs-sekcia-popis h1 {
+    font-size: 2.3vw;
+  }
+  .zs-aplikacia {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    background: #f7f5f5;
+    height: 23.81vw;
+    padding: 0 5%;
+  }
+  .zs-aplikacia-popis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 5%;
+    transform: translateY(-1vw);
+  }
+  .zs-aplikacia-nadpis h1,
+  .zs-aplikacia-nadpis i {
+    font-size: 2vw;
+  }
+  .zs-aplikacia-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .zs-aplikacia-image img {
+    margin-top: 0;
+    transform: translateY(1vw);
+  }
+}
+@media (max-width: 700px) {
+  .zs {
+    margin-top: 17.067vw;
+    padding-bottom: 25vw;
+  }
+  .zs-nadpis {
+    width: 100%;
+    height: 13.333vw;
+    background: #f0c300;
+    text-align: center;
+    font-size: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .zs-hero {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 80vw;
+  }
+  .zs-hero img {
+    width: 100%;
+    height: auto;
+  }
+  .zs-hero-popis {
+    top: 90%;
+    width: 90%;
+    height: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f0c300;
+    font-size: 4.8vw;
+    border-radius: 5.333vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .zs-hero-popis h1 {
+    font-size: 6vw;
+  }
+  .zabezpecene .circle,
+  .odomknute .circle {
+    box-shadow:
+      0 1.067vw 2.133vw 0 rgba(0, 0, 0, 0.1),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 8vw;
+    height: 8vw;
+  }
+  .zabezpecene,
+  .odomknute {
+    transform: translateX(-6vw);
+  }
+  .zs-sekcia {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    margin: 40vw auto;
+  }
+  .zs-sekcia-popis p {
+    font-size: 4.8vw;
+  }
+  .zs-sekcia-popis h1 {
+    font-size: 7vw;
+  }
+  .zs-sekcia div {
+    padding: 0 10%;
+  }
+  .special {
+    display: flex;
+    flex-direction: column;
+  }
+  .zs-aplikacia {
+    width: 100%;
+    height: 213.333vw;
+    background: #eee;
+    padding: 20vw 5%;
+  }
+  .zs-aplikacia-nadpis {
+    display: block;
+    align-items: center;
+    text-align: center;
+    color: #f6a901;
+  }
+  .zs-aplikacia-nadpis h1 {
+    font-size: 7vw;
+    margin: 0;
+  }
+  .zs-aplikacia-nadpis i {
+    font-size: 8vw;
+    padding-bottom: 2.133vw;
+  }
+  .zs-aplikacia-popis {
+    height: 48vw;
+    padding: 0 5%;
+  }
+  .zs-aplikacia-popis p {
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 4.8vw;
+  }
+  .zs-aplikacia-image img {
+    width: 100%;
+    height: auto;
+    margin: 40vw 0 50vw 0;
+  }
+} /*# sourceMappingURL=zabezpecovacie-systemy.min.css.map */
